@@ -1,0 +1,47 @@
+# Packet captures can contain credentials or other sensitive information.
+# Review and sanitize any capture before deciding to share it.
+captures/*
+!captures/.gitkeep
+*.pcap
+*.pcapng
+
+# Evidence may contain sensitive data; keep placeholders but review before commit.
+# Uncomment these lines if you want all evidence excluded by default:
+# evidence/*
+# screenshots/*
+
+# Secrets, keys, credentials, and local environment files
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+id_rsa
+id_ed25519
+known_hosts
+*.kdb
+*.p12
+*.pfx
+credentials*
+passwords*
+secrets*
+
+# Operating system / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python / temporary files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+tmp/
+temp/
+*.tmp
+*.log
